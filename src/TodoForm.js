@@ -89,25 +89,28 @@ export default class TodoForm extends React.Component {
     }
 
     markAllComplete = (e) => {
-        let tasks = this.state.todoList;
-        for(let i = 0 ; i< tasks.length ; i++){
-            let task = tasks[i];
-            task["strikeThrough"] = true;
-        }
+         let tasks = this.state.todoList;
+        // for(let i = 0 ; i< tasks.length ; i++){
+        //     let task = tasks[i];
+        //     task["strikeThrough"] = true;
+        // }
+        tasks.map( task => task.strikeThrough = true);
        this.setState({
         todoList : tasks
        })
     }
 
     markAllOpen = (e) => {
-        let tasks = this.state.todoList;
-        for(let i = 0 ; i< tasks.length ; i++){
-            let task = tasks[i];
-            task["strikeThrough"] = false;
-        }
+         let tasks = this.state.todoList;
+        // for(let i = 0 ; i< tasks.length ; i++){
+        //     let task = tasks[i];
+        //     task["strikeThrough"] = false;
+        // }
+        tasks.map( task => task.strikeThrough = false);
        this.setState({
         todoList : tasks
        })
+      
     }
 
     cancelTodo = (id) => {
