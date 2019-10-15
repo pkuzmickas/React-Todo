@@ -152,7 +152,7 @@ export default class TodoForm extends React.Component {
                 break;
         }
 
-        return <div>
+        return <div class='centered'>
             <form style={{ display: 'inline-block' }}>
                 <input type='text'
                     onChange={this.updateTodoValue}
