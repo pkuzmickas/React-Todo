@@ -6,3 +6,7 @@ li.listItems {
   display: flex;
     justify-content: space-evenly;
 }
+
+button {
+  font-family: 'Oxygen', sans-serif;
+}
